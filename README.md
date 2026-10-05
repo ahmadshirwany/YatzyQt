@@ -16,10 +16,25 @@ tracking turns, and managing the game timer.
 
 ## Requirements
 
+### Windows
+
 - Windows 10 or later
 - Qt 6 with the **Desktop MinGW 64-bit** kit
 - MinGW C++ compiler
 - Qt `qmake` and `mingw32-make` available in the terminal
+
+### Linux
+
+- A recent Linux distribution
+- Qt 6 development packages
+- A C++ compiler and `make`
+
+On Debian or Ubuntu, install the required packages with:
+
+```bash
+sudo apt update
+sudo apt install build-essential qt6-base-dev qt6-base-dev-tools
+```
 
 The project uses qmake and requires no third-party runtime libraries beyond
 the Qt installation.
@@ -51,6 +66,25 @@ mingw32-make
 ```
 
 The exact Qt and MinGW folder names depend on the installed versions.
+
+## Build and run on Linux
+
+Install the dependencies, then open a terminal in the project directory:
+
+```bash
+cd path/to/YatzyQt
+qmake6 YatzyQt.pro
+make -j"$(nproc)"
+./release/YatzyQt
+```
+
+If `qmake6` is not available, use `qmake`:
+
+```bash
+qmake YatzyQt.pro
+make -j"$(nproc)"
+./release/YatzyQt
+```
 
 ## Run from VS Code
 
