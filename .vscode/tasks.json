@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Yatzy GUI",
+            "type": "shell",
+            "command": "qmake YatzyQt.pro; if ($?) { mingw32-make }",
+            "windows": {
+                "command": "qmake YatzyQt.pro; if ($?) { mingw32-make }"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Run Yatzy GUI",
+            "type": "shell",
+            "command": ".\\release\\YatzyQt.exe",
+            "dependsOn": "Build Yatzy GUI",
+            "problemMatcher": []
+        }
+    ]
+}
