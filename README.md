@@ -4,8 +4,6 @@ A desktop Yatzy dice game built with C++ and Qt 6. YatzyQt provides a
 simple graphical interface for setting up a multiplayer game, rolling dice,
 tracking turns, and managing the game timer.
 
-![YatzyQt start window](docs/yatzy-game.png)
-
 ## Features
 
 - Multiplayer game setup
@@ -80,7 +78,7 @@ Use **Pause**, **Unpause**, **Reset**, and **Quit** when needed.
 - `include/` — C++ headers
 - `forms/` — Qt Designer `.ui` files
 - `resources/` — dice images and the Qt resource collection
-- `docs/` — player instructions and screenshots
+- `docs/` — player instructions
 - `.vscode/tasks.json` — VS Code build and run tasks
 - `YatzyQt.pro` — qmake project configuration
 
